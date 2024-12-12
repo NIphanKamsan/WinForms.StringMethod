@@ -41,30 +41,30 @@
             // 
             // txtFullname
             // 
-            txtFullname.Location = new Point(146, 66);
+            txtFullname.Location = new Point(146, 21);
             txtFullname.Name = "txtFullname";
             txtFullname.Size = new Size(425, 27);
             txtFullname.TabIndex = 0;
-            txtFullname.Text = "นางสาว   อชิเขต บุญมาแล้ว    ";
+            txtFullname.Text = "พ.ต.ร   อชิเขต บุญมาต้า    ";
             // 
             // txtTitle
             // 
             txtTitle.BackColor = SystemColors.InactiveBorder;
-            txtTitle.Location = new Point(146, 133);
+            txtTitle.Location = new Point(146, 65);
             txtTitle.Name = "txtTitle";
             txtTitle.Size = new Size(240, 27);
             txtTitle.TabIndex = 1;
             // 
             // txtFirstName
             // 
-            txtFirstName.Location = new Point(146, 166);
+            txtFirstName.Location = new Point(146, 103);
             txtFirstName.Name = "txtFirstName";
             txtFirstName.Size = new Size(240, 27);
             txtFirstName.TabIndex = 2;
             // 
             // txtLastName
             // 
-            txtLastName.Location = new Point(146, 199);
+            txtLastName.Location = new Point(146, 140);
             txtLastName.Name = "txtLastName";
             txtLastName.Size = new Size(240, 27);
             txtLastName.TabIndex = 3;
@@ -72,7 +72,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(59, 69);
+            label1.Location = new Point(44, 21);
             label1.Name = "label1";
             label1.Size = new Size(81, 20);
             label1.TabIndex = 4;
@@ -80,9 +80,9 @@
             // 
             // btnSplitName
             // 
-            btnSplitName.Location = new Point(605, 66);
+            btnSplitName.Location = new Point(621, 129);
             btnSplitName.Name = "btnSplitName";
-            btnSplitName.Size = new Size(94, 29);
+            btnSplitName.Size = new Size(94, 48);
             btnSplitName.TabIndex = 5;
             btnSplitName.Text = "แยกชื่อสกุล";
             btnSplitName.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(59, 169);
+            label2.Location = new Point(82, 106);
             label2.Name = "label2";
             label2.Size = new Size(26, 20);
             label2.TabIndex = 6;
@@ -101,7 +101,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(59, 199);
+            label3.Location = new Point(67, 140);
             label3.Name = "label3";
             label3.Size = new Size(58, 20);
             label3.TabIndex = 7;
@@ -110,7 +110,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(59, 136);
+            label4.Location = new Point(51, 73);
             label4.Name = "label4";
             label4.Size = new Size(66, 20);
             label4.TabIndex = 8;
@@ -120,7 +120,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
+            BackColor = Color.Lime;
             ClientSize = new Size(763, 299);
             Controls.Add(label4);
             Controls.Add(label3);

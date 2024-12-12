@@ -24,12 +24,54 @@
                 x = 6;
                 title = fullname.Substring(0, x);
             }
-            else if (fullname.StartsWith("นาง") || fullname.StartsWith("นาย")) 
+            else if (fullname.StartsWith("นาง") || fullname.StartsWith("นาย"))
             {
                 x = 3;
                 title = fullname.Substring(0, x);
             }
+            else if (fullname.StartsWith("เด็กชาย"))
+            {
+                x = 7;
+                title = fullname.Substring(0, x);
+            }
+            else if (fullname.StartsWith("เด็กหญิง"))
+            {
+                x = 8;
+                title = fullname.Substring(0, x);
+            }
+            else if (fullname.StartsWith("ร้อยตำรวจตรี"))
+            {
+                x = 13;
+                title = fullname.Substring(0, x);
+            }
+            else if (fullname.StartsWith("ดาบตำรวจ"))
+            {
+                x = 9;
+                title = fullname.Substring(0, x);
+            }
+            else if (fullname.StartsWith("หม่อมราชวงศ์"))
+            {
+                x = 12;
+                title = fullname.Substring(0, x);
+            }
+            else if (fullname.StartsWith("ผู้ช่วยศาสตราจารย์"))
+            {
+                x = 18;
+                title = fullname.Substring(0, x);
+            }
+            else if (fullname.StartsWith("ดอกเตอร์"))
+            {
+                x = 8;
+                title = fullname.Substring(0, x);
+            }
+            else
+            {
+                x = fullname.LastIndexOf('.') + 1;
+                title = fullname.Substring(0, x);
+            }
+            //หาตำแหน่งของ จุด (.)
             fullname = fullname.Substring(x).Trim();
+
 
             //MessageBox.Show(title + "\n" + fullname);
             x = fullname.IndexOf(' ');
@@ -42,6 +84,16 @@
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form3_Click(object sender, EventArgs e)
         {
 
         }
