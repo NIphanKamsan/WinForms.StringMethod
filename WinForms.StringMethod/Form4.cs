@@ -34,5 +34,17 @@ namespace WinForms.StringMethod
             Form3 form = new Form3();
             form.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form5 form = new Form5();
+            form.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form6 form = new Form6();
+            form.ShowDialog();
+        }
     }
 }

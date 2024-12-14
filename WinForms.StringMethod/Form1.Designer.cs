@@ -46,7 +46,7 @@
             txtFullname.Name = "txtFullname";
             txtFullname.Size = new Size(372, 23);
             txtFullname.TabIndex = 0;
-            txtFullname.Text = "พ.ต.ร   อชิเขต บุญมาต้า    ";
+            txtFullname.Text = "เด็กหญิง  อชิเขต บุญมาต้า    ";
             // 
             // txtTitle
             // 

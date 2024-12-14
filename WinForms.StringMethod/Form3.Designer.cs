@@ -87,7 +87,7 @@
             Controls.Add(btnPatternB);
             Controls.Add(btnPatternA);
             Name = "Form3";
-            Text = "Form3";
+            Text = "Return Value Method";
             ResumeLayout(false);
             PerformLayout();
         }
