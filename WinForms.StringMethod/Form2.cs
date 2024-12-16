@@ -12,7 +12,7 @@ namespace WinForms.StringMethod
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            try
+            try 
             {
                 // รับค่าจาก TextBox
                 double weight = double.Parse(txtWeight.Text); // น้ำหนัก
@@ -28,7 +28,7 @@ namespace WinForms.StringMethod
             }
             catch (Exception ex)
             {
-                // กรณีเกิดข้อผิดพลาด
+                // กรณีเกิดข้อผิดพลาด จับข้อผิดพลาด 
                 MessageBox.Show("กรุณากรอกข้อมูลให้ถูกต้อง\n" + ex.Message, "ข้อผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -78,6 +78,7 @@ namespace WinForms.StringMethod
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
+            //// โค้ดที่อาจทำให้เกิดข้อผิดพลาด
             try
             {
                 // ดึงค่าฐานและความสูงจากช่องกรอก
@@ -87,14 +88,20 @@ namespace WinForms.StringMethod
                 // คำนวณพื้นที่
                 double area = 0.5 * baseValue * heightValue;
 
-                // แสดงผลลัพธ์
+                // แสดงผลลัพธ์ วงเลขที่ใช้ F2 จะถูกแปลงให้มีทศนิยม 2 ตำแหน่งเสมอ โดยมีการปัดเศษหากเกิน 2 ตำแหน่ง  ปัดเศษ หากค่ามีทศนิยมมากกว่า 2 ตำแหน่ง
                 ResultLabel.Text = $"พื้นที่: {area:F2} หน่วย²";
             }
+            //  // โค้ดสำหรับจัดการข้อผิดพลาด
             catch (FormatException)
             {
                 // แสดงข้อความข้อผิดพลาดเมื่อกรอกข้อมูลไม่ถูกต้อง
                 MessageBox.Show("กรุณากรอกตัวเลขที่ถูกต้อง", "ข้อผิดพลาด", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

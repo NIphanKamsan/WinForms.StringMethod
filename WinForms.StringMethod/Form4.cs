@@ -46,5 +46,10 @@ namespace WinForms.StringMethod
             Form6 form = new Form6();
             form.ShowDialog();
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

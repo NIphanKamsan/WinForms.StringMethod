@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,14 +17,11 @@ namespace WinForms.StringMethod
         void SortAscending(int[] arr)
         {
             Array.Sort(arr);  // เรียงลำดับจากน้อยไปมาก
-            //return arr;
 
-            string result = "";
-
+            string result = " ";
 
             foreach (int a in arr)  // ใช้ int แทน string
             {
-
                 result += a.ToString() + Environment.NewLine;  // เก็บผลลัพธ์ใน result
             }
             label1.Text = "น้อยไปมาก\n" + result;
@@ -35,16 +29,13 @@ namespace WinForms.StringMethod
 
         void SortDescending(int[] arr)
         {
-            Array.Sort(arr);  // เรียงลำดับจากน้อยไปมาก
-            Array.Reverse(arr);  // กลับลำดับเพื่อให้เป็นการเรียงจากมากไปน้อย
-            //return arr;
+            Array.Sort(arr);  // เรียงลำดับจากไปมาก
+            Array.Reverse(arr);  
 
-            string result = "";
-
+            string result = " ";
 
             foreach (int a in arr)  // ใช้ int แทน string
             {
-
                 result += a.ToString() + Environment.NewLine;  // เก็บผลลัพธ์ใน result
             }
             label1.Text = "มากไปน้อย\n" + result;
@@ -67,13 +58,33 @@ namespace WinForms.StringMethod
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int[] numbers = textBox1.Lines.Select(line => int.TryParse(line, out var result) ? result : 0).ToArray();
+            // ใช้ LINQ เพื่อกรองเฉพาะบรรทัดที่สามารถแปลงเป็นตัวเลขได้เท่านั้น
+            int[] numbers = textBox1.Lines
+                .Select(line =>
+                {
+                    int.TryParse(line, out var result);
+                    return result;
+                })
+                .Where(n => n != 0)  // กรองค่าที่เป็น 0 ออก
+                .ToArray();
+
+            // เรียกใช้ฟังก์ชัน SortAscending
             SortAscending(numbers);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int[] numbers = textBox1.Lines.Select(line => int.TryParse(line, out var result) ? result : 0).ToArray();
+            // ใช้ LINQ เพื่อกรองเฉพาะบรรทัดที่สามารถแปลงเป็นตัวเลขได้เท่านั้น
+            int[] numbers = textBox1.Lines
+                .Select(line =>
+                {
+                    int.TryParse(line, out var result);
+                    return result;
+                })
+                .Where(n => n != 0)  // กรองค่าที่เป็น 0 ออก
+                .ToArray();
+
+            // เรียกใช้ฟังก์ชัน SortDescending
             SortDescending(numbers);
         }
     }

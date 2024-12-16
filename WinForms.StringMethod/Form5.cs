@@ -13,7 +13,14 @@ namespace WinForms.StringMethod
 
         private void label3_Click(object sender, EventArgs e)
         {
-            // ไม่ต้องการโค้ดสำหรับ Label นี้ สามารถลบทิ้งได้หากไม่ใช้
+            
+        }
+
+        // เมธอดคำนวณผลรวมและค่าเฉลี่ย
+        private double CalculateAverage(int[] numbers)
+        {
+            int sum = numbers.Sum(); // ใช้ LINQ เพื่อคำนวณผลรวม
+            return (double)sum / numbers.Length; // คำนวณค่าเฉลี่ย
         }
 
         private void btnCalculateFor_Click(object sender, EventArgs e)
@@ -32,13 +39,7 @@ namespace WinForms.StringMethod
                 int[] numbers = inputArray.Select(n => int.Parse(n.Trim())).ToArray(); // แปลงเป็น int พร้อมตัดช่องว่าง
 
                 // คำนวณผลรวมและค่าเฉลี่ยแบบ For
-                int sum = 0;
-                for (int i = 0; i < numbers.Length; i++)
-                {
-                    sum += numbers[i];
-                }
-
-                double average = (double)sum / numbers.Length;
+                double average = CalculateAverage(numbers);
 
                 // แสดงผลลัพธ์ใน Label
                 lblResultFor.Text = $"ผลลัพธ์แบบ For: {average:F2}"; // แสดงทศนิยม 2 ตำแหน่ง
@@ -69,13 +70,7 @@ namespace WinForms.StringMethod
                 int[] numbers = inputArray.Select(n => int.Parse(n.Trim())).ToArray();
 
                 // คำนวณผลรวมและค่าเฉลี่ยแบบ Foreach
-                int sum = 0;
-                foreach (int number in numbers)
-                {
-                    sum += number;
-                }
-
-                double average = (double)sum / numbers.Length;
+                double average = CalculateAverage(numbers);
 
                 // แสดงผลลัพธ์ใน Label
                 lblResultForeach.Text = $"ผลลัพธ์แบบ Foreach: {average:F2}"; // แสดงทศนิยม 2 ตำแหน่ง
@@ -94,6 +89,10 @@ namespace WinForms.StringMethod
         {
 
         }
+
+        private void lblResultForeach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-    

@@ -38,17 +38,19 @@
             // 
             // txtInputArray
             // 
-            txtInputArray.Location = new Point(65, 325);
+            txtInputArray.Location = new Point(74, 433);
+            txtInputArray.Margin = new Padding(3, 4, 3, 4);
             txtInputArray.Multiline = true;
             txtInputArray.Name = "txtInputArray";
-            txtInputArray.Size = new Size(212, 61);
+            txtInputArray.Size = new Size(242, 80);
             txtInputArray.TabIndex = 0;
             // 
             // btnCalculateFor
             // 
-            btnCalculateFor.Location = new Point(12, 100);
+            btnCalculateFor.Location = new Point(14, 133);
+            btnCalculateFor.Margin = new Padding(3, 4, 3, 4);
             btnCalculateFor.Name = "btnCalculateFor";
-            btnCalculateFor.Size = new Size(110, 125);
+            btnCalculateFor.Size = new Size(126, 167);
             btnCalculateFor.TabIndex = 1;
             btnCalculateFor.Text = "คำนวณแบบ For";
             btnCalculateFor.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // 
             // btnCalculateForeach
             // 
-            btnCalculateForeach.Location = new Point(227, 100);
+            btnCalculateForeach.Location = new Point(272, 133);
+            btnCalculateForeach.Margin = new Padding(3, 4, 3, 4);
             btnCalculateForeach.Name = "btnCalculateForeach";
-            btnCalculateForeach.Size = new Size(123, 125);
+            btnCalculateForeach.Size = new Size(141, 167);
             btnCalculateForeach.TabIndex = 2;
             btnCalculateForeach.Text = "คำนวณแบบ Foreach";
             btnCalculateForeach.UseVisualStyleBackColor = true;
@@ -67,43 +70,45 @@
             // lblResultFor
             // 
             lblResultFor.AutoSize = true;
-            lblResultFor.Location = new Point(27, 68);
+            lblResultFor.Location = new Point(35, 91);
             lblResultFor.Name = "lblResultFor";
-            lblResultFor.Size = new Size(83, 15);
+            lblResultFor.Size = new Size(105, 20);
             lblResultFor.TabIndex = 3;
             lblResultFor.Text = "ผลลัพธ์แบบ For:";
             // 
             // lblResultForeach
             // 
             lblResultForeach.AutoSize = true;
-            lblResultForeach.Location = new Point(242, 68);
+            lblResultForeach.Location = new Point(277, 91);
             lblResultForeach.Name = "lblResultForeach";
-            lblResultForeach.Size = new Size(108, 15);
+            lblResultForeach.Size = new Size(136, 20);
             lblResultForeach.TabIndex = 4;
             lblResultForeach.Text = "ผลลัพธ์แบบ Foreach:";
+            lblResultForeach.Click += lblResultForeach_Click;
             // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(123, 19);
+            lblTitle.Location = new Point(141, 25);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(118, 15);
+            lblTitle.Size = new Size(150, 20);
             lblTitle.TabIndex = 5;
             lblTitle.Text = "โปรแกรมคำนวณค่าเฉลี่ย";
             lblTitle.Click += label3_Click;
             // 
             // Form5
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
-            ClientSize = new Size(379, 450);
+            ClientSize = new Size(433, 600);
             Controls.Add(lblTitle);
             Controls.Add(lblResultForeach);
             Controls.Add(lblResultFor);
             Controls.Add(btnCalculateForeach);
             Controls.Add(btnCalculateFor);
             Controls.Add(txtInputArray);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form5";
             Text = "Form5";
             Load += Form5_Load;

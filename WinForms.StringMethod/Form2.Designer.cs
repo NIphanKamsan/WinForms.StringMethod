@@ -231,6 +231,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form2";
             Text = "Calculation";
+            Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
         }
